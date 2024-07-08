@@ -107,3 +107,60 @@ import java.util.*;
          sc.close();
      }
  }
+
+ //Check if a number is a perfect square. 
+ import java.util.*;
+ import java.lang.Math;
+ public class basiccodes{
+     public static void main(String[] args)
+     {
+         Scanner sc=new Scanner(System.in);
+         int n=sc.nextInt();
+         double sqr=Math.sqrt(n);
+         if(sqr*sqr==n)
+         {
+            System.out.print("is perfect sqaure");
+         }
+         else
+         System.out.print("not a perfect sqaure");
+         sc.close();
+     }
+ }
+
+//Check if a n is an Armstrong n. 
+import java.util.Scanner;
+
+public class basiccodes {
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+        boolean isArmstrong = isArmstrongNn(n);
+        if (isArmstrong) {
+            System.out.println(" is an Armstrong");
+        } else {
+            System.out.println(" is not an Armstrong ");
+        }
+    }
+
+    public static boolean isArmstrongNn(int n) {
+        int temp = n;
+        int noofdigi = countDigits(n);
+        int sum = 0;
+        while (n != 0) {
+            int digit = n % 10;
+            sum += Math.pow(digit, noofdigi);
+            n /= 10;
+        }
+        return sum == temp;
+    }
+    public static int countDigits(int n) {
+        int count = 0;
+        while (n != 0) {
+            count++;
+            n /= 10;
+        }
+        return count;
+    }
+}
