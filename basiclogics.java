@@ -164,3 +164,64 @@ public class basiccodes {
         return count;
     }
 }
+
+//Find the sum of digits of a number. 
+import java.util.*;
+public class basiccodes{
+    public static void main(String[] args) {
+        int n,sum=0;
+        Scanner sc= new Scanner(System.in);
+        n=sc.nextInt();
+        while(n>0)
+        {
+            int temp=n;
+            int r=n%10;
+            sum=sum+r;
+            n=n/10;
+        }
+        System.out.print(sum);
+    }
+}
+
+
+//Reverse the digits of a number.
+import java.util.*;
+public class basiccodes{
+    public static void main(String[] args) {
+        int n,rev=0;
+        Scanner sc= new Scanner(System.in);
+        n=sc.nextInt();
+        while(n>0)
+        {
+            int temp=n;
+            int r=n%10;
+            rev=rev*10+r;
+            n=n/10;
+        }
+        System.out.print(rev);
+    }
+}
+
+//Check if a number is a palindrome. 
+import java.util.*;
+public class basiccodes{
+    public static void main(String[] args) {
+        int n,rev=0,temp;
+        Scanner sc= new Scanner(System.in);
+        n=sc.nextInt();
+        temp=n;
+        while(n>0)
+        {
+            int r=n%10;
+            rev=rev*10+r;
+            n=n/10;
+        }
+        if(rev==temp)
+        {
+            System.out.print("palindrome");
+        }
+        else{
+            System.out.println("not a palindrome");
+        }
+    }
+}
