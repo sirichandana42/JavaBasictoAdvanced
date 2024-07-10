@@ -225,3 +225,32 @@ public class basiccodes{
         }
     }
 }
+
+//palindrome or not using bufferedreader
+
+import java.io.*;
+
+public class basiccodes {
+    public static void main(String[] args) throws IOException {
+        /*An error occurs if we dont use throw block/ try catch because the readLine() method from the BufferedReader class can throw an IOException. 
+        Java requires that checked exceptions, like IOException, must be either caught using a try-catch block or
+         declared to be thrown in the method signature. */
+        int n, rev = 0, temp;
+
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        String x = bf.readLine();
+        n = Integer.parseInt(x);
+        temp = n;
+        while (n > 0) {
+            int r = n % 10;
+            rev = rev * 10 + r;
+            n = n / 10;
+        }
+
+        if (rev == temp) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+    }
+}
