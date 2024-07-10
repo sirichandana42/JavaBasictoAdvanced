@@ -254,3 +254,38 @@ public class basiccodes {
         }
     }
 }
+
+//Find the power of a number using recursion. 
+import java.util.*;
+import java.io.*;
+public class basiccodes
+{
+    public static int power(int number, int power)
+        {
+            if (power == 0) 
+            {
+                return 1; 
+            } 
+            else if (power == 1) 
+            {
+                return number; 
+            } 
+            else 
+            {
+                return number * power(number, power - 1); //logic
+            }
+        }
+    public static void main(String[] args) throws IOException
+    // did using bufferedreader to get familiar with inputting using bufferedreader u can also use Scanner instead
+    {
+        BufferedReader bf= new BufferedReader(new InputStreamReader(System.in));
+        String x=bf.readLine();
+        String y=bf.readLine();
+        int a=Integer.parseInt(x);
+        int b=Integer.parseInt(y);
+        long result = power(a, b);
+        System.out.print(result);
+        power(a,b);
+
+    }
+}
