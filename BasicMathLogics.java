@@ -338,3 +338,29 @@ public class basiccodes
     }
 }
 
+//Convert a decimal number to binary.
+import java.util.*;
+public class basiccodes
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String n=sc.nextLine();
+        System.out.print(Integer.parseInt(n, 2)); 
+        sc.close();
+
+    }
+}
+//Convert a decimal number to binary.
+import java.util.*;
+public class basiccodes
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+        System.out.print(Integer.toBinaryString(n)); 
+        sc.close();
+
+    }
+}
