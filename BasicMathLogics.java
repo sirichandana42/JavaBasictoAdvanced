@@ -312,3 +312,29 @@ public class basiccodes{
 }
 
 
+//Find the square root of a number without using sqrt() function.
+import java.util.*;
+public class basiccodes
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int result=0;
+        for(int i=1;i*i<=n;i++)
+        {
+            if(i*i==n)
+            {
+                result=i;
+                System.out.print(i);
+            }
+        }
+        if(result==0)
+        {
+            System.out.print("not a perfect square");
+        }
+        sc.close();
+
+    }
+}
+
