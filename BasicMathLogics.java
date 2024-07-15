@@ -364,3 +364,22 @@ public class basiccodes
 
     }
 }
+        //method 2 without using inbuilt functions
+import java.util.*;
+public class basiccodes
+{
+    public static String decimalToBinary(int decimal) {
+        if (decimal == 0) {
+          return "0"; 
+        }      
+        StringBuilder binary = new StringBuilder();
+        while (decimal > 0) 
+        {
+          int remainder = decimal % 2;
+          binary.append(remainder); 
+          decimal /= 2; 
+        }
+        return binary.reverse().toString();
+      }
+      
+}
