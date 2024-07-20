@@ -413,3 +413,42 @@ public class basiccodes
         }
     }
 }
+
+//Check if a number is a power of two.
+import java.util.*;
+
+public class basiccodes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+        boolean flag = true;
+        
+        if (n <= 0) 
+        {
+            flag = false;
+        } 
+        else 
+        {
+            while (n > 1) 
+            {
+                if (n % 2 != 0)
+                {
+                    flag = false;
+                    break;
+                }
+                n = n / 2;
+            }
+        }
+
+        if (flag) 
+        {
+            System.out.print("is power of 2");
+        } 
+        else 
+        {
+            System.out.print("is not power of 2");
+        }
+    }
+}
+
