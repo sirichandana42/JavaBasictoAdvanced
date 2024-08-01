@@ -110,7 +110,7 @@ import java.util.*;
 
  //Check if a number is a perfect square. 
  import java.util.*;
- import java.lang.Math;
+ import java.lang.Math;  // no need to use cuz java imports it by default
  public class basiccodes{
      public static void main(String[] args)
      {
